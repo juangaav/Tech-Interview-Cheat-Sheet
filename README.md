@@ -397,3 +397,35 @@ This algorithm never needed to compare all the differences to one another, savin
 [Data Structure Interview Questions](https://www.interviewbit.com/data-structure-interview-questions/)
 [Data Structure MCQ With Answers](https://www.interviewbit.com/data-structure-mcq/)
 [10 Best Data Structures and Algorithms Books](https://www.interviewbit.com/blog/data-structures-and-algorithms-books/)
+
+### Android
+
+LeakCanary to detect memory leaks
+https://square.github.io/leakcanary/
+
+What is a pending intent?
+An intent which starts in the future. it is passed to a third party application in order to grant it permission to execute a particular piece of code
+Examples:
+NotificationManager
+AlarmManager
+
+In which thread will a service run if it is defined in the manifest file?
+A service will always run in the thread from where it's started. If a service is run from an activity, it will it will run on the main thread, blocking the UI and leading to an ANR.
+What can be done to avoid running into an ANR?
+Use a background thread, Coroutines or RXJava
+
+Can you provide some ideas to mitigate memory leaks in an app?
+Use application context instead of activity context. Activities are more likely to be leaked.
+Also avoiding non static inner classes in Activities. Using static inner classes with weak references to make sure they are not Garbage collected when they are not used.
+
+What Android component can be used to let two distinct applications interact?
+An Intent. It allows for interaction between different applications.
+
+### Java
+
+Static keyword in java
+A member of a class that can be accessed without instantiating an object of its class. Example: Toast maketext method in Android 
+
+Can you override static methos in Java? 
+no, overriding is based on dynamic binding at runtime, static members are bound at compile-time
+
